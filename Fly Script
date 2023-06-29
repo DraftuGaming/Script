@@ -1,0 +1,17 @@
+local isFlying = false
+
+function toggleFlying()
+    isFlying = not isFlying
+    if isFlying then
+        -- Code to enable flying
+        print("Flying enabled!")
+    else
+        -- Code to disable flying
+        print("Flying disabled!")
+        -- Perform actions after flying is finished
+        loadstring("print('Flying finished!')")()
+    end
+end
+
+-- Bind the ` key to the toggleFlying function
+bind("grave", "toggleFlying")
